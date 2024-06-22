@@ -1,103 +1,59 @@
 import { Image, StyleSheet, Text, View, Platform } from 'react-native';
 
-// import { HelloWave } from '@/components/HelloWave';
-// import ParallaxScrollView from '@/components/ParallaxScrollView';
-// import { ThemedText } from '@/components/ThemedText';
-// import { ThemedView } from '@/components/ThemedView';
-
 export default function App() {
   return (
     <View style={styles.container}>
-      {/* fontsize */}
       <View>
-        <Text>Introduction </Text>
-        <Text style={{ fontSize: 20 }}>Hai, My name is Robby </Text>
-        <Text style={{ fontSize: 30 }}>Hai, My name is Robby </Text>
-      </View>
+        {/* Materi Flexbox */}
+        {/* -------------- */}
 
-      {/* fontweight */}
-      <View style={{ marginTop: 30 }}>
-        <Text style={{ fontSize: 20, fontWeight: "100" }}>Hai, My name is Robby </Text>
-        <Text style={{ fontSize: 20, fontWeight: "200" }}>Hai, My name is Robby </Text>
-        <Text style={{ fontSize: 20, fontWeight: "normal" }}>Hai, My name is Robby </Text>
-        <Text style={{ fontSize: 20, fontWeight: "bold" }}>Hai, My name is Robby </Text>
-      </View>
-
-      {/* fontstyle */}
-      <View style={{ marginTop: 30 }}>
-        <Text style={{ fontSize: 20, fontStyle: 'italic' }}>Hai, My name is Robby </Text>
+        {/*1. Tiga kotak urut kebawah */}
+        <View>
+          {/* Kotak Merah */}
+          <View style={styles.merah} />
+          {/* Kotak Biru */}
+          <View style={styles.biru} />
+          {/* Kotak Hijau */}
+          <View style={styles.hijau} />
+        </View>
+        
+        {/*2. Tiga kotak urut kesamping */}
+        <View style={styles.wrapperKotak}>
+          {/* Kotak Merah */}
+          <View style={styles.merah} />
+          {/* Kotak Biru */}
+          <View style={styles.biru} />
+          {/* Kotak Hijau */}
+          <View style={styles.hijau} />
+        </View>
       </View>
     </View>
-
-    // <ParallaxScrollView
-    //   headerBackgroundColor={{
-    //     // light: '#A1CEDC', dark: '#1D3D47'
-    //     light: '#ffff', dark: '#fff'
-    //   }}
-    //   headerImage={
-    // <Image
-    // source={require('@/assets/images/partial-react-logo.png')}
-    // style={styles.reactLogo}
-    // />
-    // }>
-    // <View style={styles.container}>
-    //   <ThemedText type="title">Hai</ThemedText>
-    //   <Text>Hai, My name is Robby </Text>
-    //   {/* <HelloWave /> */}
-    // </View>{
-    /* <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({ ios: 'cmd + d', android: 'cmd + m' })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          Tap the Explore tab to learn more about what's included in this starter app.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          When you're ready, run{' '}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView> */
-    // }
-    // </ParallaxScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  // titleContainer: {
-  //   flex: 1,
-  //   // flexDirection: 'row',
-  //   // alignItems: 'center',
-  //   // gap: 8,
-  //   margin: 30,
-  // },
   container: {
     flex: 1,
-    margin: 30,
+    backgroundColor: '#fff',
+    marginTop: 30
   },
-  // stepContainer: {
-  //   gap: 8,
-  //   marginBottom: 8,
-  // },
-  // reactLogo: {
-  //   height: 178,
-  //   width: 290,
-  //   bottom: 0,
-  //   left: 0,
-  //   position: 'absolute',
-  // },
+  merah: {
+    backgroundColor: 'red',
+    width: 100,
+    height: 100,
+  },
+  biru: {
+    backgroundColor: 'blue',
+    width: 100,
+    height: 100,
+  },
+  hijau: {
+    backgroundColor: 'green',
+    width: 100,
+    height: 100,
+  },
+  wrapperKotak: {
+    marginTop: 20,
+    flexDirection: 'row',
+  },
 });

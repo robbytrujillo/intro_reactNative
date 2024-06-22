@@ -26,6 +26,16 @@ export default function App() {
           {/* Kotak Hijau */}
           <View style={styles.hijau} />
         </View>
+        
+        {/*3. Tiga kotak urut kesamping, tapi rata tengah */}
+        <View style={styles.wrapperKotak2}>
+          {/* Kotak Merah */}
+          <View style={styles.merah} />
+          {/* Kotak Biru */}
+          <View style={styles.biru} />
+          {/* Kotak Hijau */}
+          <View style={styles.hijau} />
+        </View>
       </View>
     </View>
   );
@@ -55,5 +65,10 @@ const styles = StyleSheet.create({
   wrapperKotak: {
     marginTop: 20,
     flexDirection: 'row',
+  },
+  wrapperKotak2: {
+    marginTop: 20,
+    flexDirection: 'row',
+    justifyContent: 'center',
   },
 });

@@ -1,25 +1,51 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import { Image, StyleSheet, Text, View, Platform } from 'react-native';
 
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
+// import { HelloWave } from '@/components/HelloWave';
+// import ParallaxScrollView from '@/components/ParallaxScrollView';
+// import { ThemedText } from '@/components/ThemedText';
+// import { ThemedView } from '@/components/ThemedView';
 
-export default function HomeScreen() {
+export default function App() {
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
+    <View style={styles.container}>
+      {/* fontsize */}
+      <View>
+        <Text>Introduction </Text>
+        <Text style={{ fontSize: 20 }}>Hai, My name is Robby </Text>
+        <Text style={{ fontSize: 30 }}>Hai, My name is Robby </Text>
+      </View>
+
+      {/* fontweight */}
+      <View style={{ marginTop: 30 }}>
+        <Text style={{ fontSize: 20, fontWeight: "100" }}>Hai, My name is Robby </Text>
+        <Text style={{ fontSize: 20, fontWeight: "200" }}>Hai, My name is Robby </Text>
+        <Text style={{ fontSize: 20, fontWeight: "normal" }}>Hai, My name is Robby </Text>
+        <Text style={{ fontSize: 20, fontWeight: "bold" }}>Hai, My name is Robby </Text>
+      </View>
+
+      {/* fontstyle */}
+      <View style={{ marginTop: 30 }}>
+        <Text style={{ fontSize: 20, fontStyle: 'italic' }}>Hai, My name is Robby </Text>
+      </View>
+    </View>
+
+    // <ParallaxScrollView
+    //   headerBackgroundColor={{
+    //     // light: '#A1CEDC', dark: '#1D3D47'
+    //     light: '#ffff', dark: '#fff'
+    //   }}
+    //   headerImage={
+    // <Image
+    // source={require('@/assets/images/partial-react-logo.png')}
+    // style={styles.reactLogo}
+    // />
+    // }>
+    // <View style={styles.container}>
+    //   <ThemedText type="title">Hai</ThemedText>
+    //   <Text>Hai, My name is Robby </Text>
+    //   {/* <HelloWave /> */}
+    // </View>{
+    /* <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 1: Try it</ThemedText>
         <ThemedText>
           Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
@@ -45,26 +71,33 @@ export default function HomeScreen() {
           <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
           <ThemedText type="defaultSemiBold">app-example</ThemedText>.
         </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
+      </ThemedView> */
+    // }
+    // </ParallaxScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
+  // titleContainer: {
+  //   flex: 1,
+  //   // flexDirection: 'row',
+  //   // alignItems: 'center',
+  //   // gap: 8,
+  //   margin: 30,
+  // },
+  container: {
+    flex: 1,
+    margin: 30,
   },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-  },
+  // stepContainer: {
+  //   gap: 8,
+  //   marginBottom: 8,
+  // },
+  // reactLogo: {
+  //   height: 178,
+  //   width: 290,
+  //   bottom: 0,
+  //   left: 0,
+  //   position: 'absolute',
+  // },
 });
